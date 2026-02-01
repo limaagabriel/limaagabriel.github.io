@@ -1,5 +1,5 @@
 <template>
-  <article class="border-l-3 border-theme-accent pl-6 mb-8">
+  <article class="border-l-[3px] border-theme-accent pl-6 mb-8">
     <h3 class="font-mono text-2xl mt-0 mb-2 text-theme-fg-emphasis">
       <NuxtLink :to="to" class="text-theme-accent hover:text-theme-secondary hover:underline transition-colors">
         {{ title }}
