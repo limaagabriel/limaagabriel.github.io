@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
   
-  // Static site generation for GitHub Pages
   ssr: true,
   
   app: {
@@ -19,12 +18,10 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Personal site and blog of Gabriel Lima' }
       ],
       link: [
-        // Iosevka font for titles (monospace)
         { 
           rel: 'stylesheet', 
           href: 'https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/index.min.css'
         },
-        // Lexend Deca font for text (sans-serif)
         { 
           rel: 'stylesheet', 
           href: 'https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap'
@@ -43,5 +40,13 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
+  },
+  
+  nitro: {
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/about', '/blog']
+    }
   }
 })
