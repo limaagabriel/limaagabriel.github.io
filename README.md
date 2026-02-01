@@ -1,4 +1,4 @@
-# Gabriel Alves - Personal Website
+# Gabriel Lima - Personal Website
 
 A modern, static personal website built with Nuxt.js featuring a blog, portfolio, and multiple theme options.
 

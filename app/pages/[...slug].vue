@@ -15,7 +15,7 @@ if (!page.value) {
 
 // Set page title
 useHead({
-  title: page.value.title ? `${page.value.title} - Gabriel Alves` : 'Gabriel Alves'
+  title: page.value.title ? `${page.value.title} - Gabriel Lima` : 'Gabriel Lima'
 })
 </script>
 

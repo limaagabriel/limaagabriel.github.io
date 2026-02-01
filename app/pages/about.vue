@@ -4,7 +4,7 @@
     
     <section class="mb-12">
       <p class="mb-4 text-theme-fg text-lg leading-relaxed">
-        Hi! I'm Gabriel Alves, a software developer with a passion for creating elegant and 
+        Hi! I'm Gabriel Lima, a software developer with a passion for creating elegant and 
         efficient solutions. I specialize in web development and enjoy working with modern 
         technologies like Nuxt.js, Vue.js, and TypeScript.
       </p>
@@ -45,6 +45,6 @@
 <script setup lang="ts">
 // Set page title
 useHead({
-  title: 'About & Portfolio - Gabriel Alves'
+  title: 'About & Portfolio - Gabriel Lima'
 })
 </script>

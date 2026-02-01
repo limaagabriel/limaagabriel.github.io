@@ -24,13 +24,12 @@ const changeTheme = () => {
   } else {
     document.documentElement.setAttribute('data-theme', currentTheme.value)
   }
-  // Save theme preference
+  
   if (process.client) {
     localStorage.setItem('theme', currentTheme.value)
   }
 }
 
-// Load saved theme on mount
 onMounted(() => {
   if (process.client) {
     const savedTheme = localStorage.getItem('theme')

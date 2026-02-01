@@ -12,11 +12,11 @@ export default defineNuxtConfig({
   
   app: {
     head: {
-      title: 'Gabriel Alves - Personal Site',
+      title: 'Gabriel Lima - Personal Site',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Personal site and blog of Gabriel Alves' }
+        { name: 'description', content: 'Personal site and blog of Gabriel Lima' }
       ],
       link: [
         // Iosevka font for titles (monospace)
