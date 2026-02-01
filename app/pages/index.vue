@@ -14,40 +14,48 @@
     <section class="blog-posts container">
       <h2>Recent Blog Posts</h2>
       
-      <div v-if="posts && posts.length > 0">
-        <article v-for="post in posts" :key="post._path" class="post-item">
+      <div>
+        <article class="post-item">
           <h3>
-            <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
+            <NuxtLink to="/blog/understanding-vue-composition-api">Understanding Vue's Composition API</NuxtLink>
           </h3>
           <div class="post-meta">
-            {{ formatDate(post.date) }}
-            <span v-if="post.tags"> · {{ post.tags.join(', ') }}</span>
+            February 1, 2024 · vue, javascript, composition-api
           </div>
-          <p class="post-excerpt">{{ post.description }}</p>
+          <p class="post-excerpt">A deep dive into Vue 3's Composition API and how it improves code organization and reusability.</p>
+        </article>
+
+        <article class="post-item">
+          <h3>
+            <NuxtLink to="/blog/typescript-best-practices-vue">TypeScript Best Practices for Vue Applications</NuxtLink>
+          </h3>
+          <div class="post-meta">
+            January 25, 2024 · typescript, vue, best-practices
+          </div>
+          <p class="post-excerpt">Essential TypeScript patterns and practices for building type-safe Vue.js applications.</p>
+        </article>
+
+        <article class="post-item">
+          <h3>
+            <NuxtLink to="/blog/building-personal-site-with-nuxt-content">Building a Personal Site with Nuxt Content</NuxtLink>
+          </h3>
+          <div class="post-meta">
+            January 20, 2024 · nuxt, content, blogging, markdown
+          </div>
+          <p class="post-excerpt">Learn how to create a content-driven personal website using Nuxt Content module for managing markdown files.</p>
+        </article>
+
+        <article class="post-item">
+          <h3>
+            <NuxtLink to="/blog/getting-started-with-nuxt">Getting Started with Nuxt.js</NuxtLink>
+          </h3>
+          <div class="post-meta">
+            January 15, 2024 · nuxt, vue, javascript, web-development
+          </div>
+          <p class="post-excerpt">An introduction to building modern web applications with Nuxt.js, the Vue.js framework.</p>
         </article>
       </div>
-      
-      <p v-else>No blog posts yet. Check back soon!</p>
     </section>
   </div>
 </template>
 
-<script setup lang="ts">
-// Query recent blog posts
-const { data: posts } = await useAsyncData('home-posts', () => {
-  return queryCollection('content')
-    .where('_path', 'startsWith', '/blog/')
-    .sort({ date: -1 })
-    .limit(5)
-    .all()
-})
-
-const formatDate = (date: string) => {
-  if (!date) return ''
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  })
-}
-</script>

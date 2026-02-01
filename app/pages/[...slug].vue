@@ -1,8 +1,12 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: page } = await useAsyncData('page-' + route.path, () => {
-  return queryCollection('content').path(route.path).first()
+// Fetch the content for the current path
+const { data: page } = await useAsyncData(`content-${route.path}`, () => {
+  // Use fetchContentNavigation or direct file reading
+  return $fetch(`/api/_content/query?_path=${route.path}`)
+    .then((res: any) => res[0])
+    .catch(() => null)
 })
 
 if (!page.value) {

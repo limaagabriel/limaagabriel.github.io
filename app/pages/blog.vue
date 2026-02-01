@@ -9,56 +9,52 @@
       </p>
     </div>
     
-    <div v-if="filteredPosts && filteredPosts.length > 0" class="blog-posts">
-      <article v-for="post in filteredPosts" :key="post._path" class="post-item">
+    <div class="blog-posts">
+      <article class="post-item">
         <h3>
-          <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
+          <NuxtLink to="/blog/understanding-vue-composition-api">Understanding Vue's Composition API</NuxtLink>
         </h3>
         <div class="post-meta">
-          {{ formatDate(post.date) }}
-          <span v-if="post.tags"> · {{ post.tags.join(', ') }}</span>
+          February 1, 2024 · vue, javascript, composition-api
         </div>
-        <p class="post-excerpt">{{ post.description }}</p>
+        <p class="post-excerpt">A deep dive into Vue 3's Composition API and how it improves code organization and reusability.</p>
+      </article>
+
+      <article class="post-item">
+        <h3>
+          <NuxtLink to="/blog/typescript-best-practices-vue">TypeScript Best Practices for Vue Applications</NuxtLink>
+        </h3>
+        <div class="post-meta">
+          January 25, 2024 · typescript, vue, best-practices
+        </div>
+        <p class="post-excerpt">Essential TypeScript patterns and practices for building type-safe Vue.js applications.</p>
+      </article>
+
+      <article class="post-item">
+        <h3>
+          <NuxtLink to="/blog/building-personal-site-with-nuxt-content">Building a Personal Site with Nuxt Content</NuxtLink>
+        </h3>
+        <div class="post-meta">
+          January 20, 2024 · nuxt, content, blogging, markdown
+        </div>
+        <p class="post-excerpt">Learn how to create a content-driven personal website using Nuxt Content module for managing markdown files.</p>
+      </article>
+
+      <article class="post-item">
+        <h3>
+          <NuxtLink to="/blog/getting-started-with-nuxt">Getting Started with Nuxt.js</NuxtLink>
+        </h3>
+        <div class="post-meta">
+          January 15, 2024 · nuxt, vue, javascript, web-development
+        </div>
+        <p class="post-excerpt">An introduction to building modern web applications with Nuxt.js, the Vue.js framework.</p>
       </article>
     </div>
-    
-    <p v-else>
-      {{ route.query.tag ? 'No posts found with this tag.' : 'No blog posts yet. Check back soon!' }}
-    </p>
   </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
-
-// Query all blog posts
-const { data: posts } = await useAsyncData('blog-posts', () => {
-  return queryCollection('content')
-    .where('_path', 'startsWith', '/blog/')
-    .sort({ date: -1 })
-    .all()
-})
-
-// Filter posts by tag if specified
-const filteredPosts = computed(() => {
-  if (!posts.value) return []
-  
-  const tagFilter = route.query.tag as string
-  if (!tagFilter) return posts.value
-  
-  return posts.value.filter(post => 
-    post.tags && post.tags.includes(tagFilter)
-  )
-})
-
-const formatDate = (date: string) => {
-  if (!date) return ''
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  })
-}
 
 // Set page title
 useHead({
