@@ -5,7 +5,7 @@ interface BlogPostWithPath extends BlogPost {
 }
 
 export const useBlogPosts = async (limit?: number) => {
-  const {data: posts} = await useAsyncData('blog-posts', async () => {
+  const { data: posts } = await useAsyncData('blog-posts', async () => {
     try {
       const files = await $fetch<any[]>('/api/_content/query?_path=/blog')
       
