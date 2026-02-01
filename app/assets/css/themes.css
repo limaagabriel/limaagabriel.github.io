@@ -1,0 +1,62 @@
+/* Theme Variables */
+:root {
+  /* Solarized Light (Default) */
+  --theme-bg: #fdf6e3;
+  --theme-bg-alt: #eee8d5;
+  --theme-fg: #657b83;
+  --theme-fg-emphasis: #586e75;
+  --theme-accent: #268bd2;
+  --theme-secondary: #2aa198;
+  --theme-highlight: #b58900;
+  --theme-border: #93a1a1;
+  --theme-selection: #eee8d5;
+}
+
+[data-theme="solarized-dark"] {
+  --theme-bg: #002b36;
+  --theme-bg-alt: #073642;
+  --theme-fg: #839496;
+  --theme-fg-emphasis: #93a1a1;
+  --theme-accent: #268bd2;
+  --theme-secondary: #2aa198;
+  --theme-highlight: #b58900;
+  --theme-border: #586e75;
+  --theme-selection: #073642;
+}
+
+[data-theme="monomania"] {
+  --theme-bg: #000000;
+  --theme-bg-alt: #1a1a1a;
+  --theme-fg: #00ff00;
+  --theme-fg-emphasis: #00cc00;
+  --theme-accent: #00ff00;
+  --theme-secondary: #00aa00;
+  --theme-highlight: #00ff00;
+  --theme-border: #003300;
+  --theme-selection: #003300;
+}
+
+[data-theme="github-light"] {
+  --theme-bg: #ffffff;
+  --theme-bg-alt: #f6f8fa;
+  --theme-fg: #24292f;
+  --theme-fg-emphasis: #1f2328;
+  --theme-accent: #0969da;
+  --theme-secondary: #1f883d;
+  --theme-highlight: #953800;
+  --theme-border: #d0d7de;
+  --theme-selection: #ddf4ff;
+}
+
+/* Base body styles */
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--theme-bg);
+  color: var(--theme-fg);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--theme-selection);
+  color: var(--theme-fg-emphasis);
+}

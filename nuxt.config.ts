@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    '@nuxtjs/tailwindcss',
   ],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
@@ -32,11 +33,15 @@ export default defineNuxtConfig({
     }
   },
   
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/themes.css'],
   
   content: {
     highlight: {
       theme: 'github-light'
     }
+  },
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
   }
 })
