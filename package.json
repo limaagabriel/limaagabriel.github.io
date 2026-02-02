@@ -1,0 +1,22 @@
+{
+  "name": "itsmealves-github-io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "preview:prod": "npm run generate && npx serve .output/public"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.11.0",
+    "better-sqlite3": "^12.6.2",
+    "nuxt": "^4.3.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
