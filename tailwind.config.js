@@ -1,18 +1,12 @@
-import type { Config } from 'tailwindcss'
-
 export default {
   content: [
-    './app/components/**/*.{js,vue,ts}',
-    './app/layouts/**/*.vue',
-    './app/pages/**/*.vue',
-    './app/plugins/**/*.{js,ts}',
-    './app/app.vue',
+    './app/**/*.{js,vue,ts}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        mono: ['Iosevka', 'monospace'],
-        sans: ['Lexend Deca', 'sans-serif'],
+        mono: ['var(--font-mono)'],
+        sans: ['var(--font-sans)'],
       },
       colors: {
         theme: {
@@ -29,5 +23,4 @@ export default {
       },
     },
   },
-  plugins: [],
-} satisfies Config
+}
