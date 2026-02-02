@@ -6,7 +6,8 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "preview:prod": "npm run generate && npx serve .output/public"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.0",
