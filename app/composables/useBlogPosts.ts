@@ -4,10 +4,14 @@ interface BlogPostWithPath extends BlogPost {
   _path: string
 }
 
-export const useBlogPosts = async (limit?: number) => {
-  const { data: posts } = await useAsyncData('blog-posts', async () => {
+export const useBlogPosts = (limit?: number) => {
+  const { data: posts } = useAsyncData('blog-posts', async () => {
     try {
-      const files = await queryContent('blog').find()
+      const files = await $fetch('/api/_content/query', {
+        params: {
+          _path: '/blog',
+        }
+      }) as any[]
       
       const validatedPosts = files.map((post: any) => {
         try {

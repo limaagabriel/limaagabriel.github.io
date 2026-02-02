@@ -28,8 +28,35 @@
 </template>
 
 <script setup lang="ts">
+import { validateBlogPost } from '~/utils/content-schema'
+
 const route = useRoute()
-const { posts } = await useBlogPosts()
+
+const { data: allPosts } = await useAsyncData('blog-posts', () => queryContent('blog').find())
+
+const posts = computed(() => {
+  if (!allPosts.value) return []
+  
+  try {
+    const validatedPosts = allPosts.value.map((post: any) => {
+      const validated = validateBlogPost({
+        title: post.title,
+        description: post.description,
+        date: post.date,
+        tags: post.tags,
+      })
+      return {
+        ...validated,
+        _path: post._path,
+      }
+    })
+    
+    return validatedPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  } catch (error) {
+    console.error('Error validating posts:', error)
+    return []
+  }
+})
 
 const filteredPosts = computed(() => {
   if (!posts.value) return []
