@@ -4,12 +4,12 @@ interface BlogPostWithPath extends BlogPost {
   _path: string
 }
 
-export const useBlogPosts = (limit?: number) => {
-  const { data: posts } = useAsyncData('blog-posts', async () => {
+export const useBlogPosts = async (limit?: number) => {
+  const { data: posts } = await useAsyncData('blog-posts', async () => {
     try {
       const files = await queryContent('blog').find()
       
-      const validatedPosts: BlogPostWithPath[] = files.map((post: any) => {
+      const validatedPosts = files.map((post: any) => {
         try {
           const validated = validateBlogPost({
             title: post.title,

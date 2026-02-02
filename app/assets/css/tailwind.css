@@ -1,10 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --font-mono: Iosevka, monospace;
-    --font-sans: Lexend Deca, sans-serif;
-  }
+@theme {
+  --font-mono: Iosevka, monospace;
+  --font-sans: Lexend Deca, sans-serif;
+  
+  --color-theme-bg: var(--theme-bg);
+  --color-theme-bg-alt: var(--theme-bg-alt);
+  --color-theme-fg: var(--theme-fg);
+  --color-theme-fg-emphasis: var(--theme-fg-emphasis);
+  --color-theme-accent: var(--theme-accent);
+  --color-theme-secondary: var(--theme-secondary);
+  --color-theme-highlight: var(--theme-highlight);
+  --color-theme-border: var(--theme-border);
+  --color-theme-selection: var(--theme-selection);
 }
+
+@source "../../**/*.{js,vue,ts}";

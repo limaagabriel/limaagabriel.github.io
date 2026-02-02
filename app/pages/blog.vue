@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { posts } = useBlogPosts()
+const { posts } = await useBlogPosts()
 
 const filteredPosts = computed(() => {
   if (!posts.value) return []

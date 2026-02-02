@@ -36,5 +36,5 @@
 </template>
 
 <script setup lang="ts">
-const { posts } = useBlogPosts(3)
+const { posts } = await useBlogPosts(3)
 </script>
