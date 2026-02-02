@@ -16,27 +16,71 @@
 </template>
 
 <script setup lang="ts">
+const THEME_DEFAULTS = {
+  light: 'solarized-light',
+  dark: 'solarized-dark'
+} as const
+
 const currentTheme = ref('solarized-light')
 
-const changeTheme = () => {
-  if (currentTheme.value === 'solarized-light') {
+const applyTheme = (theme: string) => {
+  if (theme === 'solarized-light') {
     document.documentElement.removeAttribute('data-theme')
   } else {
-    document.documentElement.setAttribute('data-theme', currentTheme.value)
+    document.documentElement.setAttribute('data-theme', theme)
   }
+}
+
+const getSystemTheme = (): 'light' | 'dark' => {
+  if (process.client && window.matchMedia) {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+  return 'light'
+}
+
+const changeTheme = () => {
+  applyTheme(currentTheme.value)
   
   if (process.client) {
     localStorage.setItem('theme', currentTheme.value)
   }
 }
 
+const initializeTheme = () => {
+  if (!process.client) return
+
+  const savedTheme = localStorage.getItem('theme')
+  
+  if (savedTheme) {
+    currentTheme.value = savedTheme
+  } else {
+    const systemMode = getSystemTheme()
+    currentTheme.value = THEME_DEFAULTS[systemMode]
+  }
+  
+  applyTheme(currentTheme.value)
+}
+
+const handleSystemThemeChange = (e: MediaQueryListEvent) => {
+  const hasSavedTheme = localStorage.getItem('theme')
+  
+  if (!hasSavedTheme) {
+    const systemMode = e.matches ? 'dark' : 'light'
+    currentTheme.value = THEME_DEFAULTS[systemMode]
+    applyTheme(currentTheme.value)
+  }
+}
+
 onMounted(() => {
-  if (process.client) {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme) {
-      currentTheme.value = savedTheme
-      changeTheme()
-    }
+  initializeTheme()
+  
+  if (process.client && window.matchMedia) {
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    darkModeQuery.addEventListener('change', handleSystemThemeChange)
+    
+    onBeforeUnmount(() => {
+      darkModeQuery.removeEventListener('change', handleSystemThemeChange)
+    })
   }
 })
 </script>
