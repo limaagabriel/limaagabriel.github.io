@@ -8,7 +8,7 @@ import {
 	LinkedInIcon,
 	XIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/portrait.jpeg'
 import SocialLink from './_components/SocialLink'
 import MailIcon from './_components/MailIcon'
 
