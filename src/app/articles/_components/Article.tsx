@@ -1,0 +1,39 @@
+import { Card } from '@/components/Card'
+import { type ArticleWithSlug } from '@/lib/articles'
+import { formatDate } from '@/lib/formatDate'
+
+interface ArticleProps {
+	article: ArticleWithSlug
+}
+
+function Article({ article }: ArticleProps) {
+	return (
+		<article className="md:grid md:grid-cols-4 md:items-baseline">
+			<Card className="md:col-span-3">
+				<Card.Title href={`/articles/${article.slug}`}>
+					{article.title}
+				</Card.Title>
+				<Card.Eyebrow
+					as="time"
+					dateTime={article.date}
+					className="md:hidden"
+					decorate
+				>
+					{formatDate(article.date)}
+				</Card.Eyebrow>
+				<Card.Description>{article.description}</Card.Description>
+				<Card.CallToAction>Read article</Card.CallToAction>
+			</Card>
+			<Card.Eyebrow
+				as="time"
+				dateTime={article.date}
+				className="mt-1 max-md:hidden"
+			>
+				{formatDate(article.date)}
+			</Card.Eyebrow>
+		</article>
+	)
+}
+
+export type { ArticleProps }
+export default Article
