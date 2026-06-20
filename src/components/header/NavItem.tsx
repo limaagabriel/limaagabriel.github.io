@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+
+import { Link, usePathname } from '@/i18n/navigation'
 
 export interface NavItemProps {
 	href: string

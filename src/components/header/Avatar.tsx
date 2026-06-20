@@ -1,9 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import clsx from 'clsx'
 
+import { Link } from '@/i18n/navigation'
 import avatarImage from '@/images/avatar.jpeg'
 
 export interface AvatarProps extends Omit<
@@ -14,10 +15,12 @@ export interface AvatarProps extends Omit<
 }
 
 export function Avatar({ large = false, className, ...props }: AvatarProps) {
+  let t = useTranslations('nav')
+
   return (
     <Link
       href="/"
-      aria-label="Home"
+      aria-label={t('home')}
       className={clsx(className, 'pointer-events-auto')}
       {...props}
     >
