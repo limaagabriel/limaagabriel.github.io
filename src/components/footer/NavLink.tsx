@@ -9,7 +9,7 @@ export function NavLink({ href, children }: NavLinkProps) {
 	return (
 		<Link
 			href={href}
-			className="transition hover:text-teal-500 dark:hover:text-teal-400"
+			className="transition hover:text-primary-500 dark:hover:text-primary-400"
 		>
 			{children}
 		</Link>
