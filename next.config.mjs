@@ -1,4 +1,5 @@
 import nextMDX from '@next/mdx'
+import createNextIntlPlugin from 'next-intl/plugin'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,7 +9,7 @@ const nextConfig = {
 	},
 	pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 	outputFileTracingIncludes: {
-		'/articles/*': ['./src/app/articles/**/*.mdx'],
+		'/[locale]/articles/[slug]': ['./src/articles/**/*.mdx'],
 	},
 }
 
@@ -20,4 +21,6 @@ const withMDX = nextMDX({
 	},
 })
 
-export default withMDX(nextConfig)
+const withNextIntl = createNextIntlPlugin()
+
+export default withNextIntl(withMDX(nextConfig))

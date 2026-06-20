@@ -1,0 +1,178 @@
+{
+	"nav": {
+		"home": "Início",
+		"about": "Sobre",
+		"articles": "Artigos",
+		"projects": "Projetos",
+		"speaking": "Palestras",
+		"uses": "Ferramentas",
+		"menu": "Menu",
+		"navigation": "Navegação",
+		"closeMenu": "Fechar menu"
+	},
+	"footer": {
+		"rights": "© {year} Gabriel Lima. Todos os direitos reservados."
+	},
+	"themeToggle": {
+		"toggle": "Alternar tema",
+		"switchToLight": "Mudar para o tema claro",
+		"switchToDark": "Mudar para o tema escuro"
+	},
+	"languagePicker": {
+		"label": "Mudar idioma",
+		"en": "EN",
+		"pt": "PT"
+	},
+	"social": {
+		"followX": "Seguir no X",
+		"followInstagram": "Seguir no Instagram",
+		"followGitHub": "Seguir no GitHub",
+		"followLinkedIn": "Seguir no LinkedIn"
+	},
+	"home": {
+		"title": "Designer de software, fundador e astronauta amador.",
+		"intro": "Sou designer de software e empreendedor baseado em Nova York. Fui fundador e CEO da Planetaria, onde desenvolvemos tecnologias que permitem que pessoas comuns explorem o espaço nos seus próprios termos."
+	},
+	"about": {
+		"title": "Sou o Spencer Sharp. Moro em Nova York, onde projeto o futuro.",
+		"p1": "Amo criar coisas desde que me lembro, e escrevi meu primeiro programa aos 6 anos de idade, apenas duas semanas depois que minha mãe trouxe para casa o novíssimo Macintosh LC 550 no qual aprendi a digitar sozinho.",
+		"p2": "A única coisa que eu amava mais do que computadores quando criança era o espaço. Aos 8 anos, subi no carvalho de 12 metros no fundo do nosso quintal usando o capacete de motocicleta da minha irmã mais velha, contei de três até zero e pulei — torcendo para que a árvore fosse alta o suficiente para que, com só um pouco de impulso, eu conseguisse chegar à órbita.",
+		"p3": "Passei os verões seguintes trancado em casa trabalhando no projeto de um foguete, enquanto me recuperava das várias cirurgias necessárias para consertar minhas pernas gravemente quebradas. Foram nove iterações, mas aos 15 anos enviei o Blackberry do meu pai à órbita e consegui transmitir uma foto de volta para o computador da família, direto do espaço.",
+		"p4": "Hoje sou fundador da Planetaria, onde trabalhamos em trajes espaciais civis e em kits de naves tripuladas que você pode montar em casa, para que a próxima geração de crianças realmente consiga chegar à órbita — do conforto do próprio quintal.",
+		"email": "spencer@planetaria.tech"
+	},
+	"projects": {
+		"title": "Coisas que criei tentando deixar minha marca no universo.",
+		"intro": "Trabalhei em vários projetinhos ao longo dos anos, mas estes são os que mais me orgulham. Muitos são de código aberto, então se algo despertar seu interesse, dê uma olhada no código e contribua se tiver ideias de como ele pode melhorar.",
+		"items": {
+			"planetaria": "Criando tecnologia para permitir que civis explorem o espaço nos seus próprios termos.",
+			"animaginary": "Biblioteca de animação web de alto desempenho, escrita à mão em WASM otimizado.",
+			"helioStream": "Biblioteca de streaming de vídeo em tempo real, otimizada para transmissão interestelar.",
+			"cosmos": "O sistema operacional que move as naves espaciais da Planetaria.",
+			"openShuttle": "Os esquemas do primeiro foguete que projetei e que chegou à órbita com sucesso."
+		}
+	},
+	"speaking": {
+		"title": "Palestrei em eventos pelo mundo todo e fui entrevistado em diversos podcasts.",
+		"intro": "Uma das minhas formas favoritas de compartilhar ideias é ao vivo no palco, onde há muito mais largura de banda de comunicação do que por escrito, e adoro entrevistas em podcasts porque me dão a oportunidade de responder perguntas em vez de apenas apresentar minhas opiniões.",
+		"conferences": "Conferências",
+		"podcasts": "Podcasts",
+		"watchVideo": "Assistir ao vídeo",
+		"listenToPodcast": "Ouvir o podcast",
+		"appearances": {
+			"streaming": {
+				"title": "No espaço, ninguém pode ver sua transmissão — até agora",
+				"description": "Um mergulho técnico no HelioStream, a biblioteca de streaming em tempo real que escrevi para transmitir vídeo ao vivo de volta à Terra.",
+				"event": "SysConf 2021"
+			},
+			"recall": {
+				"title": "Lições aprendidas com nosso primeiro recall de produto",
+				"description": "Dizem que se você não tem vergonha da sua primeira versão, está fazendo errado. Pois bem, quando você vende kits de nave espacial faça-você-mesmo, descobre que é um pouco mais complicado.",
+				"event": "Business of Startups 2020"
+			},
+			"design": {
+				"title": "Usando design como vantagem competitiva",
+				"description": "Como usamos design visual de classe mundial para atrair um ótimo time, conquistar clientes e ganhar mais imprensa para a Planetaria.",
+				"event": "Encoding Design, julho de 2022"
+			},
+			"bootstrapping": {
+				"title": "Construindo uma empresa aeroespacial até US$ 17M de ARR sem investidores",
+				"description": "A história de como construímos uma das startups espaciais mais promissoras do mundo sem captar nenhum capital de investidores.",
+				"event": "The Escape Velocity Show, março de 2022"
+			},
+			"operatingSystem": {
+				"title": "Programando o sistema operacional da sua empresa",
+				"description": "Sobre a importância de criar sistemas e processos para tocar o seu negócio, de modo que todos no time saibam tomar a decisão certa independentemente da situação.",
+				"event": "How They Work Radio, setembro de 2021"
+			}
+		}
+	},
+	"uses": {
+		"title": "Softwares que uso, gadgets que amo e outras coisas que recomendo.",
+		"intro": "Me perguntam muito sobre as coisas que uso para criar software, manter a produtividade ou comprar para me enganar achando que estou sendo produtivo quando, na verdade, só estou procrastinando. Aqui vai uma grande lista de todas as minhas coisas favoritas.",
+		"sections": {
+			"workstation": "Estação de trabalho",
+			"devTools": "Ferramentas de desenvolvimento",
+			"design": "Design",
+			"productivity": "Produtividade"
+		},
+		"tools": {
+			"macbook": "Eu usava um MacBook Pro de 16” com Intel antes deste e a diferença é da água para o vinho. Nunca ouvi as ventoinhas ligarem uma única vez, mesmo sob as cargas incrivelmente pesadas a que o submeto com nossas várias simulações de lançamento.",
+			"display": "O único monitor no mercado se você quer algo HiDPI e maior que 27”. Quando se trabalha em escala planetária, cada pixel que você consegue conta.",
+			"keyboard": "Não fazem mais teclados como antigamente. Compro estes sempre que os vejo à venda e os guardo em estoque caso precise de peças ou de aposentar o meu principal.",
+			"trackpad": "Algo em todos esses gestos me faz sentir como um mago com poderes especiais. E eu gosto bastante de me sentir como um mago com poderes especiais.",
+			"chair": "Se vou ficar largado na pior posição ergonômica imaginável o dia inteiro, é melhor fazer isso numa cadeira cara.",
+			"sublime": "Não me importo se faltam todos os recursos sofisticados de IDE em que todo mundo confia; o Sublime Text ainda é o melhor editor de texto já feito.",
+			"iterm": "Sinceramente, nem sei ao certo quais recursos ganho com isto que já não façam parte do Terminal do macOS, mas é o que uso.",
+			"tableplus": "Ótimo software para trabalhar com bancos de dados. Me poupou de construir cerca de mil interfaces administrativas para os meus vários projetos ao longo dos anos.",
+			"figma": "Começamos a usar o Figma só como ferramenta de design, mas agora ele virou o quadro branco virtual de toda a empresa. Nunca esperaria que os recursos de colaboração fossem o verdadeiro atrativo.",
+			"alfred": "Não é o mais novo da turma, mas ainda é o mais rápido. O Sublime Text do mundo dos lançadores de aplicativos.",
+			"reflect": "Usar um sistema de notas diárias em vez de tentar manter tudo organizado por tópicos tem sido muito poderoso para mim. E com o Reflect ainda é fácil manter tudo isso encontrável por tópico, mesmo que toda a minha escrita aconteça na nota do dia.",
+			"savvycal": "Ótima ferramenta para agendar reuniões protegendo minha agenda e garantindo que eu ainda tenha bastante tempo para trabalho focado durante a semana.",
+			"focus": "Ferramenta simples para bloquear sites que distraem quando eu só preciso trabalhar e ganhar algum embalo."
+		}
+	},
+	"articles": {
+		"title": "Escritos sobre design de software, construção de empresas e a indústria aeroespacial.",
+		"intro": "Todos os meus pensamentos mais longos sobre programação, liderança, design de produto e muito mais, reunidos em ordem cronológica.",
+		"readArticle": "Ler artigo",
+		"goBack": "Voltar aos artigos"
+	},
+	"newsletter": {
+		"title": "Fique por dentro",
+		"description": "Receba um aviso quando eu publicar algo novo, e cancele a inscrição quando quiser.",
+		"emailPlaceholder": "Endereço de e-mail",
+		"emailLabel": "Endereço de e-mail",
+		"join": "Inscrever"
+	},
+	"resume": {
+		"work": "Experiência",
+		"downloadCv": "Baixar CV",
+		"present": "Atual",
+		"roles": {
+			"liferay": "Engenheiro de Software",
+			"imogen": "Cofundador",
+			"btg": "Engenheiro de Software",
+			"pickcells": "Engenheiro de Software"
+		}
+	},
+	"thankYou": {
+		"title": "Obrigado por se inscrever.",
+		"intro": "Vou te enviar um e-mail sempre que publicar um novo post, lançar um novo projeto ou tiver algo interessante para compartilhar que eu ache que você gostaria de saber. Você pode cancelar a inscrição quando quiser, sem ressentimentos."
+	},
+	"notFound": {
+		"title": "Página não encontrada",
+		"description": "Desculpe, não conseguimos encontrar a página que você procura.",
+		"backHome": "Voltar para o início"
+	},
+	"metadata": {
+		"home": {
+			"title": "Gabriel Lima - Engenharia de software",
+			"description": "Sou o Gabriel, engenheiro de software e empreendedor baseado em Recife. Foco em entregar tecnologia enquanto busco a melhoria contínua."
+		},
+		"about": {
+			"title": "Sobre",
+			"description": "Sou o Spencer Sharp. Moro em Nova York, onde projeto o futuro."
+		},
+		"projects": {
+			"title": "Projetos",
+			"description": "Coisas que criei tentando deixar minha marca no universo."
+		},
+		"speaking": {
+			"title": "Palestras",
+			"description": "Palestrei em eventos pelo mundo todo e fui entrevistado em diversos podcasts."
+		},
+		"uses": {
+			"title": "Ferramentas",
+			"description": "Softwares que uso, gadgets que amo e outras coisas que recomendo."
+		},
+		"articles": {
+			"title": "Artigos",
+			"description": "Todos os meus pensamentos mais longos sobre programação, liderança, design de produto e muito mais, reunidos em ordem cronológica."
+		},
+		"thankYou": {
+			"title": "Inscrição confirmada",
+			"description": "Obrigado por assinar minha newsletter."
+		}
+	}
+}

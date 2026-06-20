@@ -12,25 +12,27 @@ export interface ArticleWithSlug extends Article {
 }
 
 async function importArticle(
-	articleFilename: string,
+	slug: string,
+	locale: string,
 ): Promise<ArticleWithSlug> {
-	let { article } = (await import(`../app/articles/${articleFilename}`)) as {
+	let { article } = (await import(`../articles/${slug}/${locale}.mdx`)) as {
 		default: React.ComponentType
 		article: Article
 	}
 
-	return {
-		slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
-		...article,
-	}
+	return { slug, ...article }
 }
 
-export async function getAllArticles() {
-	let articleFilenames = await glob('*/page.mdx', {
-		cwd: './src/app/articles',
-	})
+export async function getArticleSlugs() {
+	let files = await glob('*/en-US.mdx', { cwd: './src/articles' })
+	return files.map((file) => file.split('/')[0])
+}
 
-	let articles = await Promise.all(articleFilenames.map(importArticle))
+export async function getAllArticles(locale: string) {
+	let slugs = await getArticleSlugs()
+	let articles = await Promise.all(
+		slugs.map((slug) => importArticle(slug, locale)),
+	)
 
 	return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }

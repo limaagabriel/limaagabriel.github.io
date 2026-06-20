@@ -1,5 +1,6 @@
-import Link from 'next/link'
 import { PopoverButton } from '@headlessui/react'
+
+import { Link } from '@/i18n/navigation'
 
 export interface MobileNavItemProps {
 	href: string

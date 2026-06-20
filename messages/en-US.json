@@ -1,0 +1,178 @@
+{
+	"nav": {
+		"home": "Home",
+		"about": "About",
+		"articles": "Articles",
+		"projects": "Projects",
+		"speaking": "Speaking",
+		"uses": "Uses",
+		"menu": "Menu",
+		"navigation": "Navigation",
+		"closeMenu": "Close menu"
+	},
+	"footer": {
+		"rights": "© {year} Gabriel Lima. All rights reserved."
+	},
+	"themeToggle": {
+		"toggle": "Toggle theme",
+		"switchToLight": "Switch to light theme",
+		"switchToDark": "Switch to dark theme"
+	},
+	"languagePicker": {
+		"label": "Change language",
+		"en": "EN",
+		"pt": "PT"
+	},
+	"social": {
+		"followX": "Follow on X",
+		"followInstagram": "Follow on Instagram",
+		"followGitHub": "Follow on GitHub",
+		"followLinkedIn": "Follow on LinkedIn"
+	},
+	"home": {
+		"title": "Software designer, founder, and amateur astronaut.",
+		"intro": "I've been a software designer and entrepreneur based in New York City. I've been the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+	},
+	"about": {
+		"title": "I'm Spencer Sharp. I live in New York City, where I design the future.",
+		"p1": "I've loved making things for as long as I can remember, and wrote my first program when I was 6 years old, just two weeks after my mom brought home the brand new Macintosh LC 550 that I taught myself to type on.",
+		"p2": "The only thing I loved more than computers as a kid was space. When I was 8, I climbed the 40-foot oak tree at the back of our yard while wearing my older sister's motorcycle helmet, counted down from three, and jumped — hoping the tree was tall enough that with just a bit of momentum I'd be able to get to orbit.",
+		"p3": "I spent the next few summers indoors working on a rocket design, while I recovered from the multiple surgeries it took to fix my badly broken legs. It took nine iterations, but when I was 15 I sent my dad's Blackberry into orbit and was able to transmit a photo back down to our family computer from space.",
+		"p4": "Today, I'm the founder of Planetaria, where we're working on civilian space suits and manned shuttle kits you can assemble at home so that the next generation of kids really can make it to orbit — from the comfort of their own backyards.",
+		"email": "spencer@planetaria.tech"
+	},
+	"projects": {
+		"title": "Things I've made trying to put my dent in the universe.",
+		"intro": "I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.",
+		"items": {
+			"planetaria": "Creating technology to empower civilians to explore space on their own terms.",
+			"animaginary": "High performance web animation library, hand-written in optimized WASM.",
+			"helioStream": "Real-time video streaming library, optimized for interstellar transmission.",
+			"cosmos": "The operating system that powers our Planetaria space shuttles.",
+			"openShuttle": "The schematics for the first rocket I designed that successfully made it to orbit."
+		}
+	},
+	"speaking": {
+		"title": "I've spoken at events all around the world and been interviewed for many podcasts.",
+		"intro": "One of my favorite ways to share my ideas is live on stage, where there's so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions.",
+		"conferences": "Conferences",
+		"podcasts": "Podcasts",
+		"watchVideo": "Watch video",
+		"listenToPodcast": "Listen to podcast",
+		"appearances": {
+			"streaming": {
+				"title": "In space, no one can watch you stream — until now",
+				"description": "A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth.",
+				"event": "SysConf 2021"
+			},
+			"recall": {
+				"title": "Lessons learned from our first product recall",
+				"description": "They say that if you're not embarassed by your first version, you're doing it wrong. Well when you're selling DIY space shuttle kits it turns out it's a bit more complicated.",
+				"event": "Business of Startups 2020"
+			},
+			"design": {
+				"title": "Using design as a competitive advantage",
+				"description": "How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria.",
+				"event": "Encoding Design, July 2022"
+			},
+			"bootstrapping": {
+				"title": "Bootstrapping an aerospace company to $17M ARR",
+				"description": "The story of how we built one of the most promising space startups in the world without taking any capital from investors.",
+				"event": "The Escape Velocity Show, March 2022"
+			},
+			"operatingSystem": {
+				"title": "Programming your company operating system",
+				"description": "On the importance of creating systems and processes for running your business so that everyone on the team knows how to make the right decision no matter the situation.",
+				"event": "How They Work Radio, September 2021"
+			}
+		}
+	},
+	"uses": {
+		"title": "Software I use, gadgets I love, and other things I recommend.",
+		"intro": "I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I'm being productive when I'm really just procrastinating. Here's a big list of all of my favorite stuff.",
+		"sections": {
+			"workstation": "Workstation",
+			"devTools": "Development tools",
+			"design": "Design",
+			"productivity": "Productivity"
+		},
+		"tools": {
+			"macbook": "I was using an Intel-based 16” MacBook Pro prior to this and the difference is night and day. I've never heard the fans turn on a single time, even under the incredibly heavy loads I put it through with our various launch simulations.",
+			"display": "The only display on the market if you want something HiDPI and bigger than 27”. When you're working at planetary scale, every pixel you can get counts.",
+			"keyboard": "They don't make keyboards the way they used to. I buy these any time I see them go up for sale and keep them in storage in case I need parts or need to retire my main.",
+			"trackpad": "Something about all the gestures makes me feel like a wizard with special powers. I really like feeling like a wizard with special powers.",
+			"chair": "If I'm going to slouch in the worst ergonomic position imaginable all day, I might as well do it in an expensive chair.",
+			"sublime": "I don't care if it's missing all of the fancy IDE features everyone else relies on, Sublime Text is still the best text editor ever made.",
+			"iterm": "I'm honestly not even sure what features I get with this that aren't just part of the macOS Terminal but it's what I use.",
+			"tableplus": "Great software for working with databases. Has saved me from building about a thousand admin interfaces for my various projects over the years.",
+			"figma": "We started using Figma as just a design tool but now it's become our virtual whiteboard for the entire company. Never would have expected the collaboration features to be the real hook.",
+			"alfred": "It's not the newest kid on the block but it's still the fastest. The Sublime Text of the application launcher world.",
+			"reflect": "Using a daily notes system instead of trying to keep things organized by topics has been super powerful for me. And with Reflect, it's still easy for me to keep all of that stuff discoverable by topic even though all of my writing happens in the daily note.",
+			"savvycal": "Great tool for scheduling meetings while protecting my calendar and making sure I still have lots of time for deep work during the week.",
+			"focus": "Simple tool for blocking distracting websites when I need to just do the work and get some momentum going."
+		}
+	},
+	"articles": {
+		"title": "Writing on software design, company building, and the aerospace industry.",
+		"intro": "All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.",
+		"readArticle": "Read article",
+		"goBack": "Go back to articles"
+	},
+	"newsletter": {
+		"title": "Stay up to date",
+		"description": "Get notified when I publish something new, and unsubscribe at any time.",
+		"emailPlaceholder": "Email address",
+		"emailLabel": "Email address",
+		"join": "Join"
+	},
+	"resume": {
+		"work": "Work",
+		"downloadCv": "Download CV",
+		"present": "Present",
+		"roles": {
+			"liferay": "Software Engineer",
+			"imogen": "Co-founder",
+			"btg": "Software Engineer",
+			"pickcells": "Software Engineer"
+		}
+	},
+	"thankYou": {
+		"title": "Thanks for subscribing.",
+		"intro": "I'll send you an email any time I publish a new blog post, release a new project, or have anything interesting to share that I think you'd want to hear about. You can unsubscribe at any time, no hard feelings."
+	},
+	"notFound": {
+		"title": "Page not found",
+		"description": "Sorry, we couldn't find the page you're looking for.",
+		"backHome": "Go back home"
+	},
+	"metadata": {
+		"home": {
+			"title": "Gabriel Lima - Software engineering",
+			"description": "I'm Gabriel, a software engineer and entrepeneur based in Recife. I'm focused on delivering technology while focusing on self-improvement."
+		},
+		"about": {
+			"title": "About",
+			"description": "I'm Spencer Sharp. I live in New York City, where I design the future."
+		},
+		"projects": {
+			"title": "Projects",
+			"description": "Things I've made trying to put my dent in the universe."
+		},
+		"speaking": {
+			"title": "Speaking",
+			"description": "I've spoken at events all around the world and been interviewed for many podcasts."
+		},
+		"uses": {
+			"title": "Uses",
+			"description": "Software I use, gadgets I love, and other things I recommend."
+		},
+		"articles": {
+			"title": "Articles",
+			"description": "All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+		},
+		"thankYou": {
+			"title": "You're subscribed",
+			"description": "Thanks for subscribing to my newsletter."
+		}
+	}
+}

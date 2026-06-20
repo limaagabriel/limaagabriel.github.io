@@ -25,13 +25,13 @@ export async function GET() {
 		},
 	})
 
-	let articles = await getAllArticles()
+	let articles = await getAllArticles('en-US')
 
 	for (let article of articles) {
 		feed.addItem({
 			title: article.title,
-			id: `${siteUrl}/articles/${article.slug}`,
-			link: `${siteUrl}/articles/${article.slug}`,
+			id: `${siteUrl}/en-US/articles/${article.slug}`,
+			link: `${siteUrl}/en-US/articles/${article.slug}`,
 			description: article.description,
 			author: [author],
 			contributor: [author],

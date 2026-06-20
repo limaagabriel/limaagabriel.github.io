@@ -1,7 +1,12 @@
+import { useTranslations } from 'next-intl'
+
 import { ContainerInner, ContainerOuter } from '@/components/Container'
 import { NavLink } from '@/components/footer/NavLink'
 
 export function Footer() {
+	let nav = useTranslations('nav')
+	let footer = useTranslations('footer')
+
 	return (
 		<footer className="mt-32 flex-none">
 			<ContainerOuter>
@@ -9,14 +14,13 @@ export function Footer() {
 					<ContainerInner>
 						<div className="flex flex-col items-center justify-between gap-6 md:flex-row">
 							<div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-								<NavLink href="/about">About</NavLink>
-								<NavLink href="/projects">Projects</NavLink>
-								<NavLink href="/speaking">Speaking</NavLink>
-								<NavLink href="/uses">Uses</NavLink>
+								<NavLink href="/about">{nav('about')}</NavLink>
+								<NavLink href="/projects">{nav('projects')}</NavLink>
+								<NavLink href="/speaking">{nav('speaking')}</NavLink>
+								<NavLink href="/uses">{nav('uses')}</NavLink>
 							</div>
 							<p className="text-sm text-zinc-400 dark:text-zinc-500">
-								&copy; {new Date().getFullYear()} Spencer Sharp. All rights
-								reserved.
+								{footer('rights', { year: new Date().getFullYear() })}
 							</p>
 						</div>
 					</ContainerInner>

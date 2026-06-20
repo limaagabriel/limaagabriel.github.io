@@ -1,14 +1,15 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { usePathname } from 'next/navigation'
 
 import { Container } from '@/components/Container'
 import { MobileNavigation } from '@/components/header/MobileNavigation'
 import { DesktopNavigation } from '@/components/header/DesktopNavigation'
 import { ThemeToggle } from '@/components/header/ThemeToggle'
+import { LanguagePicker } from '@/components/header/LanguagePicker'
 import { AvatarContainer } from '@/components/header/AvatarContainer'
 import { Avatar } from '@/components/header/Avatar'
+import { usePathname } from '@/i18n/navigation'
 
 function clamp(number: number, a: number, b: number) {
 	let min = Math.min(a, b)
@@ -197,7 +198,8 @@ export function Header() {
 								<MobileNavigation className="pointer-events-auto md:hidden" />
 								<DesktopNavigation className="pointer-events-auto hidden md:block" />
 							</div>
-							<div className="flex justify-end md:flex-1">
+							<div className="flex justify-end gap-4 md:flex-1">
+								<LanguagePicker />
 								<div className="pointer-events-auto">
 									<ThemeToggle />
 								</div>
