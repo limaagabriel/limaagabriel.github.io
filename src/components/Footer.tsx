@@ -4,8 +4,8 @@ import { ContainerInner, ContainerOuter } from '@/components/Container'
 import { NavLink } from '@/components/footer/NavLink'
 
 export function Footer() {
-	let nav = useTranslations('nav')
-	let footer = useTranslations('footer')
+	const nav = useTranslations('nav')
+	const footer = useTranslations('footer')
 
 	return (
 		<footer className="mt-32 flex-none">

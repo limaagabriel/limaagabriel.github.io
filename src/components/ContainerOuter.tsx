@@ -1,8 +1,7 @@
 import { forwardRef } from 'react'
 import clsx from 'clsx'
 
-export interface ContainerOuterProps
-	extends React.ComponentPropsWithoutRef<'div'> {}
+export interface ContainerOuterProps extends React.ComponentPropsWithoutRef<'div'> {}
 
 export const ContainerOuter = forwardRef<
 	React.ElementRef<'div'>,

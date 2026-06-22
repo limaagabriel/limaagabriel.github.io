@@ -4,8 +4,8 @@ import { Button } from '@/components/Button'
 import MailIcon from './MailIcon'
 
 function Newsletter() {
-	let t = useTranslations('newsletter')
-	let locale = useLocale()
+	const t = useTranslations('newsletter')
+	const locale = useLocale()
 
 	return (
 		<form

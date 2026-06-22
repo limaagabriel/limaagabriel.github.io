@@ -8,10 +8,10 @@ import { SunIcon } from '@/components/icons/SunIcon'
 import { MoonIcon } from '@/components/icons/MoonIcon'
 
 export function ThemeToggle() {
-	let { resolvedTheme, setTheme } = useTheme()
-	let otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
-	let [mounted, setMounted] = useState(false)
-	let t = useTranslations('themeToggle')
+	const { resolvedTheme, setTheme } = useTheme()
+	const otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
+	const [mounted, setMounted] = useState(false)
+	const t = useTranslations('themeToggle')
 
 	useEffect(() => {
 		// eslint-disable-next-line react-hooks/set-state-in-effect

@@ -8,7 +8,7 @@ export interface NavItemProps {
 }
 
 export function NavItem({ href, children }: NavItemProps) {
-	let isActive = usePathname() === href
+	const isActive = usePathname() === href
 
 	return (
 		<li>

@@ -7,8 +7,8 @@ import ThemeWatcher from './_components/ThemeWatcher'
 import { AppContext } from './_components/AppContext'
 
 export function Providers({ children }: { children: React.ReactNode }) {
-	let pathname = usePathname()
-	let previousPathname = usePrevious(pathname)
+	const pathname = usePathname()
+	const previousPathname = usePrevious(pathname)
 
 	return (
 		<AppContext.Provider value={{ previousPathname }}>

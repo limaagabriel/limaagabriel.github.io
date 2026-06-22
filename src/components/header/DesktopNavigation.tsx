@@ -2,11 +2,10 @@ import { useTranslations } from 'next-intl'
 
 import { NavItem } from '@/components/header/NavItem'
 
-export interface DesktopNavigationProps
-	extends React.ComponentPropsWithoutRef<'nav'> {}
+export interface DesktopNavigationProps extends React.ComponentPropsWithoutRef<'nav'> {}
 
 export function DesktopNavigation(props: DesktopNavigationProps) {
-	let t = useTranslations('nav')
+	const t = useTranslations('nav')
 
 	return (
 		<nav {...props}>

@@ -17,10 +17,10 @@ export interface ArticleLayoutProps {
 }
 
 export function ArticleLayout({ article, children }: ArticleLayoutProps) {
-	let router = useRouter()
-	let { previousPathname } = useContext(AppContext)
-	let t = useTranslations('articles')
-	let locale = useLocale()
+	const router = useRouter()
+	const { previousPathname } = useContext(AppContext)
+	const t = useTranslations('articles')
+	const locale = useLocale()
 
 	return (
 		<Container className="mt-16 lg:mt-32">

@@ -1,14 +1,15 @@
-import { useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 function usePrevious<T>(value: T) {
-	let ref = useRef<T | undefined>(undefined)
+	const [current, setCurrent] = useState(value)
+	const [previous, setPrevious] = useState<T | undefined>(undefined)
 
-	useEffect(() => {
-		ref.current = value
-	}, [value])
+	if (value !== current) {
+		setPrevious(current)
+		setCurrent(value)
+	}
 
-	// eslint-disable-next-line react-hooks/rules-of-hooks
-	return ref.current
+	return previous
 }
 
 export default usePrevious

@@ -18,8 +18,8 @@ export async function generateMetadata({
 }: {
 	params: Promise<{ locale: string }>
 }): Promise<Metadata> {
-	let { locale } = await params
-	let t = await getTranslations({ locale, namespace: 'metadata' })
+	const { locale } = await params
+	const t = await getTranslations({ locale, namespace: 'metadata' })
 	return { title: t('about.title'), description: t('about.description') }
 }
 
@@ -28,10 +28,10 @@ export default async function About({
 }: {
 	params: Promise<{ locale: string }>
 }) {
-	let { locale } = await params
+	const { locale } = await params
 	setRequestLocale(locale)
-	let t = await getTranslations('about')
-	let social = await getTranslations('social')
+	const t = await getTranslations('about')
+	const social = await getTranslations('social')
 
 	return (
 		<Container className="mt-16 sm:mt-32">

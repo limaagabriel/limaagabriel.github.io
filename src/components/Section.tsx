@@ -6,7 +6,7 @@ export interface SectionProps {
 }
 
 export function Section({ title, children }: SectionProps) {
-	let id = useId()
+	const id = useId()
 
 	return (
 		<section

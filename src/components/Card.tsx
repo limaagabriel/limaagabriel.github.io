@@ -18,19 +18,21 @@ export { CardDescription }
 export { CardCallToAction }
 export { CardEyebrow }
 
-export type CardProps<T extends React.ElementType = 'div'> =
-	Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'className'> & {
-		as?: T
-		className?: string
-		children?: React.ReactNode
-	}
+export type CardProps<T extends React.ElementType = 'div'> = Omit<
+	React.ComponentPropsWithoutRef<T>,
+	'as' | 'className'
+> & {
+	as?: T
+	className?: string
+	children?: React.ReactNode
+}
 
 export function Card<T extends React.ElementType = 'div'>({
 	as,
 	className,
 	children,
 }: CardProps<T>) {
-	let Component = as ?? 'div'
+	const Component = as ?? 'div'
 
 	return (
 		<Component

@@ -4,7 +4,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 
 export default async function NotFound() {
-	let t = await getTranslations('notFound')
+	const t = await getTranslations('notFound')
 
 	return (
 		<Container className="flex h-full items-center pt-16 sm:pt-32">

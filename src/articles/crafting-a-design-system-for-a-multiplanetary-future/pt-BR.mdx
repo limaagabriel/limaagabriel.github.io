@@ -2,20 +2,20 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 import designSystem from './planetaria-design-system.png'
 
 export const article = {
-  author: 'Adam Wathan',
-  date: '2022-09-05',
-  title: 'Criando um design system para um futuro multiplanetário',
-  description:
-    'A maioria das empresas tenta ficar à frente da curva quando o assunto é design visual, mas para a Planetaria precisávamos criar uma marca que ainda nos inspirasse daqui a 100 anos, quando a humanidade tiver se espalhado por todo o nosso sistema solar.',
+	author: 'Adam Wathan',
+	date: '2022-09-05',
+	title: 'Criando um design system para um futuro multiplanetário',
+	description:
+		'A maioria das empresas tenta ficar à frente da curva quando o assunto é design visual, mas para a Planetaria precisávamos criar uma marca que ainda nos inspirasse daqui a 100 anos, quando a humanidade tiver se espalhado por todo o nosso sistema solar.',
 }
 
 export const metadata = {
-  title: article.title,
-  description: article.description,
+	title: article.title,
+	description: article.description,
 }
 
 export default function ArticlePage({ children }) {
-  return <ArticleLayout article={article}>{children}</ArticleLayout>
+	return <ArticleLayout article={article}>{children}</ArticleLayout>
 }
 
 A maioria das empresas tenta ficar à frente da curva quando o assunto é design visual, mas para a Planetaria precisávamos criar uma marca que ainda nos inspirasse daqui a 100 anos, quando a humanidade tiver se espalhado por todo o nosso sistema solar.

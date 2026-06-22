@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
 	{
 		rules: {
 			'@next/next/no-img-element': 'off',
+			'prefer-const': 'error',
 		},
 	},
 ])

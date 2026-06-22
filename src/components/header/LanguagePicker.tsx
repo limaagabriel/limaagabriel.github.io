@@ -8,9 +8,9 @@ import { Link, usePathname } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
 
 export function LanguagePicker() {
-	let pathname = usePathname()
-	let active = useLocale()
-	let t = useTranslations('languagePicker')
+	const pathname = usePathname()
+	const active = useLocale()
+	const t = useTranslations('languagePicker')
 
 	return (
 		<div

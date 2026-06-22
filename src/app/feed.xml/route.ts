@@ -3,15 +3,15 @@ import { getAllArticles } from '@/lib/articles'
 
 export const dynamic = 'force-static'
 
-let siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? ''
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? ''
 
-let author = {
+const author = {
 	name: 'Spencer Sharp',
 	email: 'spencer@planetaria.tech',
 }
 
 export async function GET() {
-	let feed = new Feed({
+	const feed = new Feed({
 		title: author.name,
 		description: 'Your blog description',
 		author,
@@ -25,9 +25,9 @@ export async function GET() {
 		},
 	})
 
-	let articles = await getAllArticles('en-US')
+	const articles = await getAllArticles('en-US')
 
-	for (let article of articles) {
+	for (const article of articles) {
 		feed.addItem({
 			title: article.title,
 			id: `${siteUrl}/en-US/articles/${article.slug}`,

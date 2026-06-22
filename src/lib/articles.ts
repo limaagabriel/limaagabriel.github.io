@@ -15,7 +15,7 @@ async function importArticle(
 	slug: string,
 	locale: string,
 ): Promise<ArticleWithSlug> {
-	let { article } = (await import(`../articles/${slug}/${locale}.mdx`)) as {
+	const { article } = (await import(`../articles/${slug}/${locale}.mdx`)) as {
 		default: React.ComponentType
 		article: Article
 	}
@@ -24,13 +24,13 @@ async function importArticle(
 }
 
 export async function getArticleSlugs() {
-	let files = await glob('*/en-US.mdx', { cwd: './src/articles' })
+	const files = await glob('*/en-US.mdx', { cwd: './src/articles' })
 	return files.map((file) => file.split('/')[0])
 }
 
 export async function getAllArticles(locale: string) {
-	let slugs = await getArticleSlugs()
-	let articles = await Promise.all(
+	const slugs = await getArticleSlugs()
+	const articles = await Promise.all(
 		slugs.map((slug) => importArticle(slug, locale)),
 	)
 

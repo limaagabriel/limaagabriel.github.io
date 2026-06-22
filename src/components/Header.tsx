@@ -12,21 +12,21 @@ import { Avatar } from '@/components/header/Avatar'
 import { usePathname } from '@/i18n/navigation'
 
 function clamp(number: number, a: number, b: number) {
-	let min = Math.min(a, b)
-	let max = Math.max(a, b)
+	const min = Math.min(a, b)
+	const max = Math.max(a, b)
 	return Math.min(Math.max(number, min), max)
 }
 
 export function Header() {
-	let isHomePage = usePathname() === '/'
+	const isHomePage = usePathname() === '/'
 
-	let headerRef = useRef<React.ElementRef<'div'>>(null)
-	let avatarRef = useRef<React.ElementRef<'div'>>(null)
-	let isInitial = useRef(true)
+	const headerRef = useRef<React.ElementRef<'div'>>(null)
+	const avatarRef = useRef<React.ElementRef<'div'>>(null)
+	const isInitial = useRef(true)
 
 	useEffect(() => {
-		let downDelay = avatarRef.current?.offsetTop ?? 0
-		let upDelay = 64
+		const downDelay = avatarRef.current?.offsetTop ?? 0
+		const upDelay = 64
 
 		function setProperty(property: string, value: string) {
 			document.documentElement.style.setProperty(property, value)
@@ -41,8 +41,8 @@ export function Header() {
 				return
 			}
 
-			let { top, height } = headerRef.current.getBoundingClientRect()
-			let scrollY = clamp(
+			const { top, height } = headerRef.current.getBoundingClientRect()
+			const scrollY = clamp(
 				window.scrollY,
 				0,
 				document.body.scrollHeight - window.innerHeight,
@@ -58,7 +58,7 @@ export function Header() {
 				setProperty('--header-height', `${downDelay + height}px`)
 				setProperty('--header-mb', `${-downDelay}px`)
 			} else if (top + height < -upDelay) {
-				let offset = Math.max(height, scrollY - upDelay)
+				const offset = Math.max(height, scrollY - upDelay)
 				setProperty('--header-height', `${offset}px`)
 				setProperty('--header-mb', `${height - offset}px`)
 			} else if (top === 0) {
@@ -82,12 +82,12 @@ export function Header() {
 				return
 			}
 
-			let fromScale = 1
-			let toScale = 36 / 64
-			let fromX = 0
-			let toX = 2 / 16
+			const fromScale = 1
+			const toScale = 36 / 64
+			const fromX = 0
+			const toX = 2 / 16
 
-			let scrollY = downDelay - window.scrollY
+			const scrollY = downDelay - window.scrollY
 
 			let scale = (scrollY * (fromScale - toScale)) / downDelay + toScale
 			scale = clamp(scale, fromScale, toScale)
@@ -100,9 +100,9 @@ export function Header() {
 				`translate3d(${x}rem, 0, 0) scale(${scale})`,
 			)
 
-			let borderScale = 1 / (toScale / scale)
-			let borderX = (-toX + x) * borderScale
-			let borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`
+			const borderScale = 1 / (toScale / scale)
+			const borderX = (-toX + x) * borderScale
+			const borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`
 
 			setProperty('--avatar-border-transform', borderTransform)
 			setProperty('--avatar-border-opacity', scale === toScale ? '1' : '0')
@@ -133,44 +133,6 @@ export function Header() {
 					marginBottom: 'var(--header-mb)',
 				}}
 			>
-				{isHomePage && (
-					<>
-						<div
-							ref={avatarRef}
-							className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
-						/>
-						<Container
-							className="top-0 order-last -mb-3 pt-3"
-							style={{
-								position:
-									'var(--header-position)' as React.CSSProperties['position'],
-							}}
-						>
-							<div
-								className="top-(--avatar-top,--spacing(3)) w-full"
-								style={{
-									position:
-										'var(--header-inner-position)' as React.CSSProperties['position'],
-								}}
-							>
-								<div className="relative">
-									<AvatarContainer
-										className="absolute top-3 left-0 origin-left transition-opacity"
-										style={{
-											opacity: 'var(--avatar-border-opacity, 0)',
-											transform: 'var(--avatar-border-transform)',
-										}}
-									/>
-									<Avatar
-										large
-										className="block h-16 w-16 origin-left"
-										style={{ transform: 'var(--avatar-image-transform)' }}
-									/>
-								</div>
-							</div>
-						</Container>
-					</>
-				)}
 				<div
 					ref={headerRef}
 					className="top-0 z-10 h-16 pt-6"
@@ -187,13 +149,7 @@ export function Header() {
 						}}
 					>
 						<div className="relative flex gap-4">
-							<div className="flex flex-1">
-								{!isHomePage && (
-									<AvatarContainer>
-										<Avatar />
-									</AvatarContainer>
-								)}
-							</div>
+							<div className="flex flex-1"></div>
 							<div className="flex flex-1 justify-end md:justify-center">
 								<MobileNavigation className="pointer-events-auto md:hidden" />
 								<DesktopNavigation className="pointer-events-auto hidden md:block" />

@@ -10,11 +10,12 @@ import { CloseIcon } from '@/components/icons/CloseIcon'
 import { ChevronDownIcon } from '@/components/icons/ChevronDownIcon'
 import { MobileNavItem } from '@/components/header/MobileNavItem'
 
-export interface MobileNavigationProps
-	extends React.ComponentPropsWithoutRef<typeof Popover> {}
+export interface MobileNavigationProps extends React.ComponentPropsWithoutRef<
+	typeof Popover
+> {}
 
 export function MobileNavigation(props: MobileNavigationProps) {
-	let t = useTranslations('nav')
+	const t = useTranslations('nav')
 
 	return (
 		<Popover {...props}>

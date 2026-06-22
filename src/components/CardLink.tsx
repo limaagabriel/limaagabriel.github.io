@@ -1,7 +1,8 @@
 import { Link } from '@/i18n/navigation'
 
-export interface CardLinkProps
-	extends React.ComponentPropsWithoutRef<typeof Link> {}
+export interface CardLinkProps extends React.ComponentPropsWithoutRef<
+	typeof Link
+> {}
 
 export function CardLink({ children, ...props }: CardLinkProps) {
 	return (

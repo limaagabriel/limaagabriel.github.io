@@ -12,18 +12,17 @@ import SocialLink from './_components/SocialLink'
 import Article from './_components/Article'
 import Newsletter from './_components/Newsletter'
 import Resume from './_components/Resume'
-import Photos from './_components/Photos'
 
 export default async function Home({
 	params,
 }: {
 	params: Promise<{ locale: string }>
 }) {
-	let { locale } = await params
+	const { locale } = await params
 	setRequestLocale(locale)
-	let t = await getTranslations('home')
-	let social = await getTranslations('social')
-	let articles = (await getAllArticles(locale)).slice(0, 4)
+	const t = await getTranslations('home')
+	const social = await getTranslations('social')
+	const articles = (await getAllArticles(locale)).slice(0, 4)
 
 	return (
 		<>
@@ -55,7 +54,6 @@ export default async function Home({
 					</div>
 				</div>
 			</Container>
-			<Photos />
 			<Container className="mt-24 md:mt-28">
 				<div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
 					<div className="flex flex-col gap-16">

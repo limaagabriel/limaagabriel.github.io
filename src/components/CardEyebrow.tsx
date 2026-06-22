@@ -1,11 +1,13 @@
 import clsx from 'clsx'
 
-export type CardEyebrowProps<T extends React.ElementType = 'p'> =
-	Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'decorate'> & {
-		as?: T
-		decorate?: boolean
-		children?: React.ReactNode
-	}
+export type CardEyebrowProps<T extends React.ElementType = 'p'> = Omit<
+	React.ComponentPropsWithoutRef<T>,
+	'as' | 'decorate'
+> & {
+	as?: T
+	decorate?: boolean
+	children?: React.ReactNode
+}
 
 export function CardEyebrow<T extends React.ElementType = 'p'>({
 	as,
@@ -14,7 +16,7 @@ export function CardEyebrow<T extends React.ElementType = 'p'>({
 	children,
 	...props
 }: CardEyebrowProps<T>) {
-	let Component = as ?? 'p'
+	const Component = as ?? 'p'
 
 	return (
 		<Component

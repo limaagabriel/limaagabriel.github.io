@@ -1,20 +1,20 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 
 export const article = {
-  author: 'Adam Wathan',
-  date: '2022-09-02',
-  title: 'Apresentando o Animaginary: animações web de alto desempenho',
-  description:
-    'Quando você está construindo um site para uma empresa tão ambiciosa quanto a Planetaria, precisa causar impressão. Eu queria que as pessoas visitassem nosso site e vissem animações mais realistas do que a própria realidade.',
+	author: 'Adam Wathan',
+	date: '2022-09-02',
+	title: 'Apresentando o Animaginary: animações web de alto desempenho',
+	description:
+		'Quando você está construindo um site para uma empresa tão ambiciosa quanto a Planetaria, precisa causar impressão. Eu queria que as pessoas visitassem nosso site e vissem animações mais realistas do que a própria realidade.',
 }
 
 export const metadata = {
-  title: article.title,
-  description: article.description,
+	title: article.title,
+	description: article.description,
 }
 
 export default function ArticlePage({ children }) {
-  return <ArticleLayout article={article}>{children}</ArticleLayout>
+	return <ArticleLayout article={article}>{children}</ArticleLayout>
 }
 
 Quando você está construindo um site para uma empresa tão ambiciosa quanto a Planetaria, precisa causar impressão. Eu queria que as pessoas visitassem nosso site e vissem animações mais realistas do que a própria realidade.
@@ -25,16 +25,16 @@ Para tornar isso possível, precisávamos extrair cada gota de desempenho possí
 import { animate } from '@planetaria/animaginary'
 
 export function MyComponent({ open, children }) {
-  return (
-    <animate.div
-      in={open}
-      animateFrom="opacity-0 scale-95"
-      animateTo="opacity-100 scale-100"
-      duration={350}
-    >
-      {children}
-    </animate.div>
-  )
+	return (
+		<animate.div
+			in={open}
+			animateFrom="opacity-0 scale-95"
+			animateTo="opacity-100 scale-100"
+			duration={350}
+		>
+			{children}
+		</animate.div>
+	)
 }
 ```
 

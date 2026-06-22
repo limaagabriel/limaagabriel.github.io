@@ -1,12 +1,8 @@
 import clsx from 'clsx'
 
-export interface AvatarContainerProps
-	extends React.ComponentPropsWithoutRef<'div'> {}
+export interface AvatarContainerProps extends React.ComponentPropsWithoutRef<'div'> {}
 
-export function AvatarContainer({
-	className,
-	...props
-}: AvatarContainerProps) {
+export function AvatarContainer({ className, ...props }: AvatarContainerProps) {
 	return (
 		<div
 			className={clsx(

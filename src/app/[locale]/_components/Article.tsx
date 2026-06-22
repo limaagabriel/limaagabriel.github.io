@@ -9,8 +9,8 @@ interface ArticleProps {
 }
 
 function Article({ article }: ArticleProps) {
-	let t = useTranslations('articles')
-	let locale = useLocale()
+	const t = useTranslations('articles')
+	const locale = useLocale()
 
 	return (
 		<Card as="article">

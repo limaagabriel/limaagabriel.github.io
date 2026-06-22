@@ -6,11 +6,7 @@ interface ToolProps {
 	children: React.ReactNode
 }
 
-function Tool({
-	title,
-	href,
-	children,
-}: ToolProps) {
+function Tool({ title, href, children }: ToolProps) {
 	return (
 		<Card as="li">
 			<Card.Title as="h3" href={href}>
